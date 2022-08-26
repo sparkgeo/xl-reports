@@ -13,15 +13,15 @@ Generate Excel reports!
 
 Report configuration is defined as array/list of objects/dicts.
 
-```
-"cell": <string> Worksheet cell coordinates to insert data, example: "B2"
-"range": <string> Worksheet coordinate range to insert data. Range start coordinate is required and end coordinate is optional.
-    examples: 
-        * "B2:"
-        * "B2:C5"
-"data_key": <string> Key to use when fetching values from the data dictionary to insert into the worksheet. example: data["report_date"]
-"sheet": <string> Worksheet name.
-```
+
+**"cell"**: <string> Worksheet cell coordinates to insert data, example: `"B2"`
+
+**"range"**: <string> Worksheet coordinate range to insert data. Range start coordinate is required and end coordinate is optional. examples: `"B2:"` or `"B2:C5"`
+
+**"data_key**": <string> Key to use when fetching values from the data dictionary to insert into the worksheet. example: `data["report_date"]`
+
+**"sheet"**: <string> Worksheet name.
+
 
 **Example configuration**
 
@@ -30,17 +30,17 @@ Report configuration is defined as array/list of objects/dicts.
     {
         "cell": "B2",
         "data_key": "account",
-        "sheet": "Area trends"
+        "sheet": "my_sheet"
     },
     {
         "cell": "B4",
         "data_key": "report_date",
-        "sheet": "Area trends"
+        "sheet": "my_sheet"
     },
     {
         "range": "A8",
         "data_key": "report_data",
-        "sheet": "Area trends"
+        "sheet": "my_sheet"
     }
 ]
 ```
@@ -48,12 +48,12 @@ Report configuration is defined as array/list of objects/dicts.
 **Example data**
 
 ```
-{
-    "account": "Engineering"
-    "report_date": str(date.today())
+[{
+    "account": "Engineering",
+    "report_date": str(date.today()),
     "report_data": [
         [23.43, 11.96, 9.66],
         [6.99, 65.87, 45.33],
     ]
-}
+}]
 ```
