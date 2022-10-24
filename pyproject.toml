@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "xl-reports"
-version = "0.1.2"
+version = "0.1.3"
 description = "Generate reports from a excel file and some data."
 authors = ["Dustin Sampson <dustin@sparkgeo.com>"]
 license = "MIT"

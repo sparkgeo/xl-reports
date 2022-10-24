@@ -30,7 +30,7 @@ def insert_range(
     row, col = coordinate_to_tuple(rng)
     for n, row_val in enumerate(_data):
         for m, col_val in enumerate(row_val):
-            ws.cell(row=row + n, column=col + m, value=col_val)
+            ws.cell(row=row + n, column=col + m).value = col_val
 
 
 @overload

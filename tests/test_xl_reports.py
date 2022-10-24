@@ -28,8 +28,8 @@ def report_data():
         "account": "Engineering",
         "report_date": str(date.today()),
         "report_data": [
-            [23.43, 11.96, 9.66],
-            [6.99, 65.87, 45.33],
+            [23.43, 11.96, 0.43],
+            [6.99, 65.87, 0.6545],
         ],
     }
 
